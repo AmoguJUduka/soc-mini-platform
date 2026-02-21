@@ -1,0 +1,15 @@
+# data & reports
+data/
+reports/out/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
