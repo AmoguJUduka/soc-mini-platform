@@ -14,12 +14,27 @@ import random
 import time
 from datetime import datetime, timedelta, timezone
 
+
+
+"""
+UAS_BENIGN: A collection of "Regular Joe" User Agent strings.
+These represent legitimate browsers (Chrome, Safari, Firefox) across 
+different operating systems (Windows, macOS, Linux, iOS, Android). 
+Used in the simulation to create a baseline of normal human traffic 
+to mask or contrast against automated scanning tools.
+"""
+
 UAS_BENIGN = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_6) AppleWebKit/605.1.15 Version/17.0 Safari/605.1.15",
     "Mozilla/5.0 (X11; Linux x86_64) Gecko/20100101 Firefox/121.0",
 ]
-
+"""
+UAS_SCANNERS: A list of non-browser identities.
+These represent automated tools (curl, wget) and security scanners (Nikto, Nmap).
+In a real log, these are "low-hanging fruit" for security teams to flag 
+because legitimate human users almost never use these strings to browse a site.
+"""
 UAS_SCANNERS = [
     "curl/8.1.2",
     "Wget/1.21.3",
@@ -30,10 +45,26 @@ UAS_SCANNERS = [
     "Nikto/2.1.6",
 ]
 
+
+"""
+BENIGN_PATHS: A collection of public-facing, "safe" URLs.
+These represent the standard content a normal visitor would access.
+In log analysis, these typically correlate with '200 OK' status codes 
+and come from legitimate browser User Agents.
+"""
+
 BENIGN_PATHS = [
     "/", "/index.html", "/about", "/pricing", "/docs", "/contact",
     "/assets/app.css", "/assets/app.js", "/favicon.ico",
 ]
+
+"""
+SCAN_PATHS: A "hit list" of sensitive or hidden directories.
+These include configuration files (.env), admin logins (/wp-admin),
+and known exploit paths. In a security context, any request to 
+these paths is considered suspicious and usually results in a 403 or 404.
+"""
+
 
 SCAN_PATHS = [
     "/admin", "/wp-admin", "/phpmyadmin", "/.env", "/config.php", "/server-status",
@@ -41,6 +72,13 @@ SCAN_PATHS = [
     "/.git/config", "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
 ]
 
+
+"""
+LOGIN_PATHS: Targeted endpoints for authentication.
+In the attack simulation, these are paired with POST methods and 401/403 
+status codes to mimic "credential spraying"—where an attacker tries 
+common passwords against an account.
+"""
 LOGIN_PATHS = ["/login", "/signin", "/admin/login"]
 METHODS = ["GET", "POST"]
 
