@@ -27,12 +27,5 @@ See: `docs/architecture.md`
 - `reports/` - incident report generator
 - `data/` - raw and normalized datasets (gitignored)
 
-## Quick Start (coming soon)
-Day 2–8 will add:
-- log generator + collection scripts
-- parsing + ingestion
-- detection rules
-- report output and a one-command demo
-
 ## Disclaimer
 This project is for defensive security learning and detection engineering practice.
