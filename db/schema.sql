@@ -44,3 +44,25 @@ CREATE TABLE IF NOT EXISTS events (
   INDEX idx_user_ts (username, ts),
   INDEX idx_http_status (http_status)
 ) ENGINE=InnoDB;
+
+-- new detections table 
+CREATE TABLE IF NOT EXISTS detections (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  detected_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+  rule_name VARCHAR(128) NOT NULL,
+  severity VARCHAR(32) NOT NULL,
+
+  ip VARCHAR(45) NULL,
+  username VARCHAR(128) NULL,
+
+  event_count INT NOT NULL,
+  first_seen DATETIME(6) NULL,
+  last_seen DATETIME(6) NULL,
+
+  details JSON NULL,
+
+  INDEX idx_rule (rule_name),
+  INDEX idx_ip (ip),
+  INDEX idx_detected_at (detected_at)
+) ENGINE=InnoDB;
