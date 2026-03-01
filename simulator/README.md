@@ -133,8 +133,8 @@ without relying on live or sensitive production traffic.
 ---
 
 ## Acronyms
-SOC - Security Operations Center
-SIEM - Security Information and Events Management 
-SQL - Structured Query Language 
-API - Application Programmable Interface 
-HTTP - HyperText Transfer Protocol 
+**SOC** - Security Operations Center
+**SIEM** - Security Information and Events Management 
+**SQL** - Structured Query Language 
+**API** - Application Programmable Interface 
+**HTTP** - HyperText Transfer Protocol 
