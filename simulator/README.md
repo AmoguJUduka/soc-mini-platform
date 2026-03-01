@@ -129,3 +129,12 @@ Planned or possible future enhancements include:
 The Web Log Generator is a **foundational telemetry source** for the SOC Mini-Platform.
 It enables realistic detection engineering, SOC workflow testing, and security education
 without relying on live or sensitive production traffic.
+
+---
+
+## Acronyms
+SOC - Security Operations Center
+SIEM - Security Information and Events Management 
+SQL - Structured Query Language 
+API - Application Programmable Interface 
+HTTP - HyperText Transfer Protocol 
