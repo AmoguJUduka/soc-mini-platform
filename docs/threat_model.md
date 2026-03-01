@@ -25,7 +25,7 @@
 - Parser must be resilient to malformed lines
 - DB credentials must be protected via env vars
 
-## Security assumptions (for a portfolio project)
+## Security assumptions
 
 - Logs may be incomplete or tampered → detection is “best effort”
 - This is not a full SIEM; it’s a mini pipeline demo
