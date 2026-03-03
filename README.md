@@ -5,7 +5,7 @@ A small SOC-style pipeline that ingests logs, normalizes events, runs detection 
 ## Project Goals
 - Collect raw logs (Linux auth + generated web access logs)
 - Normalize into a common event schema (Python)
-- Store events + detections in MySQL
+- Store events and detections in MySQL
 - Run detection rules with time windows
 - Produce reproducible incident reports
 
