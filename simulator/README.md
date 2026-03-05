@@ -1,6 +1,6 @@
 # Web Log Generator (Simulator)
 
-The Web Log Generator simulates realistic **web access logs** for use in the SOC Mini-Platform (Mini SIEM).  
+The Web Log Generator simulates realistic web access logs for use in the SOC Mini-Platform (Mini SIEM).  
 It is designed to create repeatable, high-signal log data that can be ingested, normalized, and analyzed
 by detection rules.
 
